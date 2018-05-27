@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <children>
+      <Label layoutX="188.0" layoutY="33.0" text="Huffman (De)Compressor" textFill="#720000">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <MenuBar prefHeight="20.0" prefWidth="582.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Main">
+            <items>
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Available Operations">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#compress" text="Compress" />
+                  <MenuItem mnemonicParsing="false" onAction="#deCompress" text="Decompress" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="120.0" text="Input file name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="184.0" layoutY="163.0" text="Compression ratio:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="120.0" text="Output file name:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="charsCodes" editable="false" layoutX="136.0" layoutY="203.0" prefHeight="181.0" prefWidth="438.0" />
+      <Label layoutX="26.0" layoutY="212.0" text="Chars &amp; Codes:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="inFile" editable="false" layoutX="128.0" layoutY="111.0" prefHeight="25.0" prefWidth="138.0" />
+      <JFXTextField fx:id="outFile" editable="false" layoutX="421.0" layoutY="111.0" prefHeight="25.0" prefWidth="138.0" />
+      <JFXTextField fx:id="compRatio" editable="false" layoutX="320.0" layoutY="158.0" prefHeight="25.0" prefWidth="78.0" />
+      <Label layoutX="13.0" layoutY="80.0" text="* Compression Info:" textFill="#750000">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="header" editable="false" layoutX="136.0" layoutY="417.0" prefHeight="181.0" prefWidth="438.0" />
+      <Label layoutX="16.0" layoutY="417.0" text="Header contents:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+       <TextField fx:id="stat" alignment="CENTER" editable="false" layoutX="124.0" layoutY="633.0" prefHeight="25.0" prefWidth="334.0" promptText="Status" />
+
+   </children>
+</AnchorPane>
